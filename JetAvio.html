@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>JetAvio.com</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <style>
+        table {
+            border: 1px solid black;
+            text-align: center;
+            color: white;
+        }
+        th, td {
+            padding: 10px;
+        }
+        section {
+            flex: 0 0 100vw;
+            height: calc(100vh - 100px);
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: bottom;
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Top Section -->
+    <section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="JetAvio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+            <a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+    </section>
+
+    <!-- Scroll Container for Horizontal Sections -->
+    <div id="scrollcontainer">
+        <section id="first"></section>
+        <section id="second">
+            <p>Join us in a remarkable journey<br>Soar high and experience the beauty from above</p>
+        </section>
+        <section id="third">
+            <p>In the World full of aviation<br>Exploring the mysteries of the sky</p>
+        </section>
+        <section id="fourth">
+            <p>Descriptions, Photos and more...</p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <section id="fifth">
+        <center>
+            <table border="1" style="text-align: center; color: white;" bordercolor="black">
+                <tr><th width="25%" rowspan="4" style="font-size: 50px;">&Sum;</th></tr>
+                <tr><th style="font-size: 25px;">Made with love by:</th></tr>
+                <tr><td style="font-size: 25px;">&copy; Prithak Nepal</td></tr>
+                <tr><td style="font-size: 25px;">Kathmandu, Nepal</td></tr>        
+            </table>
+        </center>
+    </section>
+    <script>
+        const scrollSpeed = 3000;
+        // Function to handle automatic scrolling
+        function autoScroll() {
+            const container = document.getElementById('scrollcontainer');
+            const sections = container.querySelectorAll('section');
+            const sectionWidth = window.innerWidth;
+            let scrollIndex = 0;
+            setInterval(() => {
+                scrollIndex = (scrollIndex + 1) % sections.length;
+                container.scrollTo({
+                    left: scrollIndex * sectionWidth,
+                    behavior: 'smooth'
+                });
+            }, scrollSpeed);
+        }
+        // Run the autoScroll function after the page loads
+        window.addEventListener('load', autoScroll);
+    </script>   
+</body>
+</html>
