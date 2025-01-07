@@ -1,0 +1,201 @@
+<html>
+<head>
+	<title>JetAvio.com</title>
+	<link rel="stylesheet" href="homestyle.css">
+	<script src="scrollremember.js"></script>
+	<style>
+		body {margin: 0;padding: 0; font-size: large ;font-family: 'Times New Roman' ;background-size: cover; background-image: url('WBBGradient.jpg'); height: 100%}
+		/* #first{background-size: cover; background-image: url('IMAGES/background/greenshade.jpg'); height: 100%} */
+		.format{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+         /* CSS for image and text */
+         .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 30%; /* Each image container takes up 30% of the width */
+        }
+        .image-container img {
+            width: 100%; /* Set the width of the image to 100% of its container */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            border-radius: 5px;
+			cursor: pointer; /* Change cursor to pointer on hover */
+            transition: transform 0.2s;
+        }
+        .image-container p {
+            margin-top: 10px;
+        }
+		label{font-size: 25px}
+		select{font-size: 20px}
+	</style>
+</head>
+<body>
+	<section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+			<a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+	</section>
+	<center>
+	<label>Choose an option:</label> 
+	<select onchange="redirectToPage(this)">
+		<option>--select--</option>
+		<option value="jetairbus.html">Airbus</a></option>
+		<option value="jetboeing.html">Boeing</a></option>
+		<option value="jetembraer.html">Embraer</a></option>
+		<option value="jetatr.html">ATR</a></option>
+		<option value="jetcomac.html">COMAC</a></option>
+		<option>Military</a></option>
+	</select>
+	
+	<div id="compare_route_button-container">
+		<a href="routevisual.html"><button style="align-items: left;">Route Visualization</button></a>
+		<a href="comparison.html"><button style="align-items: right;">Compare Aircrafts</button></a>
+	</div>	
+
+	<section class="format">
+		<div class="image-container">
+			<img src="airbuslogo.png" alt="Image 1">
+		</div>
+	</section>
+	</center>
+	<center><i><b>Note: Click the aircraft for its details</b></i></center>
+<!-- .............................................................. -->
+
+	<script>
+    function redirectToPage(selectElement) 
+    {
+        var selectedValue = selectElement.value;
+        if (selectedValue) 
+        {
+            window.location.href = selectedValue;
+        }
+    }
+	</script>
+
+<!-- .............................................................. -->
+
+<section class="format">
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a300">
+			<img src="a300.jpg" alt="A300">
+			<p>A300</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a310">
+			<img src="a310.jpg" alt="A310">
+			<p>A310</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a318">
+			<img src="a318.jpg" alt="A318">
+			<p>A318</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a319">
+			<img src="a319.jpg" alt="A319">
+			<p>A319</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a320">
+			<img src="a320.jpg" alt="A320">
+			<p>A320</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a321">
+			<img src="a321.jpg" alt="A321">
+			<p>A321</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a330-200">
+			<img src="a330-200.jpg" alt="A330-200">
+			<p>A330-200</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a330-300">
+			<img src="a330-300.jpg" alt="A330-300">
+			<p>A330-300</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a330-800">
+			<img src="a330-800.jpg" alt="A330-800">
+			<p>A330-800</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a330-900">
+			<img src="a330-900.jpg" alt="A330-900">
+			<p>A330-900</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a340-200">
+			<img src="a340-200.jpg" alt="A340-200">
+			<p>A340-200</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a340-300">
+			<img src="a340-300.jpg" alt="A340-300">
+			<p>A340-300</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a340-500">
+			<img src="a340-500.jpg" alt="A340-500">
+			<p>A340-500</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a340-600">
+			<img src="a340-600.jpg" alt="A340-600">
+			<p>A340-600</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a350-900">
+			<img src="a350-900.jpg" alt="A350-900">
+			<p>A350-900</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a350-1000">
+			<img src="a350-1000.jpg" alt="A350-1000">
+			<p>A350-1000</p>
+		</a>
+	</div>
+	<div class="image-container">
+		<a href="aircraftdetail.html?aircraft=a380">
+			<img src="a380.jpg" alt="A380">
+			<p>A380</p>
+		</a>
+	</div>
+</section>
+
+<script>
+	  function redirectToPage(selectElement) {
+            var selectedValue = selectElement.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+</script>
+
+</body> 	
+</html>

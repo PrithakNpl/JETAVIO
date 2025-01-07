@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>JetAvio.com</title>
+	<link rel="stylesheet" href="homestyle.css">
+	<style>
+		#bottom{background-size: cover; background-image: url('redshade.jpg'); height: 100%;}
+		fieldset{width: 30%; border-width: 2px;border-color: #ff1a1a; border-style: solid; margin: auto;}
+		html{overflow-y: hidden;}
+	</style>
+</head>
+<body>
+	<section id="top">	
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+			<a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+    </section>
+	
+	<section id="bottom">
+	<br><br><form style="color: #ff1a1a" method="POST">
+		<fieldset width="30%">
+				<center>
+				<br><br><label>User Name:</label>
+				<input type="text" placeholder="Enter your user name" id="username" name="username"><br><br>
+				<input type="radio" name="gender">Male
+				<input type="radio" name="gender">Female<br><br>
+				<label>DOB:</label>
+				<input type="date"><br><br>
+				<label>E-mail:</label>
+				<input type="text" placeholder="......@......com" name="email"><br><br>
+				<label>Password:</label>
+				<input type="password" id="password"><br><br>
+				<input type="checkbox" onclick="showPassword()">Show Passwords<br><br>
+				<label>Confirm password:</label>
+				<input type="password" id="cpassword"><br><br>
+				<button type="submit" name="submit" onclick="validateForm()" style="color: red; background-color: white;">Sign In</button>
+				<!-- <input type="submit" name="submit" value="submit" > -->
+				<button type="reset" style="color: red; background-color: white;">Reset</button>
+			    </center><br><br>
+				<!-- <center><a href="https://youtube/1g1MiH8A9io?si=lTHpLr1JSvVdrmwA">Watch Technical Support</a><center> -->
+				</fieldset>	
+	</form>
+	</center>
+</section>
+<script type="text/javascript">
+        function validateForm() {
+        var uname = document.getElementById('username').value;
+        var pd = document.getElementById('password').value;
+        var cpd = document.getElementById('cpassword').value;
+
+        if (uname === '' || pd === '' || cpd === '') {
+            alert("All fields must be filled out!");
+            return false; // Prevent form submission
+        } else if (pd !== cpd) {
+            alert("The passwords do not match!");
+            return false; // Prevent form submission
+        } else {
+            alert("Login Successful!");
+            // You can add code here to redirect or perform other actions upon successful login
+            return true; // Allow form submission
+        }
+    	}
+        function showPassword()
+        {
+        	var password = document.getElementById("password");
+        	var cpassword=document.getElementById("cpassword");
+    		var checkbox = document.querySelector("input[type='checkbox']");
+    		if (checkbox.checked) 
+    		{
+        		password.type = "text";
+        		cpassword.type="text";
+    		} 
+    		else 
+    		{
+        		password.type = "password";
+        		cpassword.type="password";
+    		}
+        }
+    </script> 
+<!-- <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "jetavio";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "connected successfully";
+  if (isset($_POST['submit'])) {
+    $name = $_POST['username'];
+    $email = $_POST['email'];
+    $sql = "INSERT INTO customers(username,email) VALUES ('$name','$email')";
+    $result = $conn->query($sql);
+    if ($result == TRUE) {
+      echo "New record created successfully.";
+    }else{
+      echo "Error:". $sql . "<br>". $conn->error;
+    }
+    $conn->close();
+}
+?> -->
+</body> 	
+</html>

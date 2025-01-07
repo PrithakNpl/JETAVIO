@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>JetAvio.com</title>
+  <link rel="stylesheet" href="homestyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cesium/1.104.0/Widgets/widgets.css">
+  <link rel="stylesheet" href="routevisual.css">
+  <script src="routevisual.js"></script>
+</head>
+<body>
+  <section id="top">
+    <a href="JetAvio.html"><p class="logo-image"></p></a>
+    <div class="button-group">
+      <a href="Jetavio.html"><button>Home</button></a>
+      <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+      <a href="jetavioflights.html"><button>Flights</button></a>
+      <a href="jetavioradar.html"><button>Radar</button></a>
+      <a href="jetaviosignup.html"><button>Sign Up</button></a>
+      <a href="jetavioabout.html"><button>About</button></a>
+    </div>
+  </section>
+
+  <center><button class="back-button" onclick="goBack()">Back to previous page</button></center><br>
+
+  <div id="overallcontainer">
+    <div id="globe-container"></div>
+    <div id="info-container">
+      <h2>Flight Route Visualization</h2>
+      <label for="origin">Origin:</label>
+      <select class="select" id="origin">
+        <option value="">Select Origin</option>
+      </select>
+      <label for="destination">Destination:</label>
+      <select class="select" id="destination">
+        <option value="">Select Destination</option>
+      </select><br>
+      <button class="button" id="submit">Show Route</button>
+      <div id="details">
+        <p><strong>Origin:</strong> <span id="origin-name"></span></p>
+        <p><strong>Destination:</strong> <span id="destination-name"></span></p>
+        <p><strong>Distance:</strong> <span id="distance"></span> km</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cesium/1.104.0/Cesium.js"></script>
+  
+</body>
+</html>

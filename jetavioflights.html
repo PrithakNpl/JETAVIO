@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title>JetAvio.com</title>
+    <link rel="stylesheet" href="forflights.css">
+    <link rel="stylesheet" href="homestyle.css">
+    <style>
+        html{overflow-y: hidden;}
+        #bottom{background-size: cover; background-image: url('forflights.jpg'); height: 100%;}
+    </style>
+</head>
+<body>
+    <section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+            <a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+    </section>
+        
+    <b><section id="bottom">
+        <center><form style="font-size: x-large; color: #ff1a1a;" method="POST" style="background-color: bisque;" id="placeform">
+        <fieldset width="60%" id="placeFieldset">
+                <center>
+                <br><br><label>From:</label>
+                <select>
+					<option>Kathmandu</option>
+                </select> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <label>To:</label>
+                <select id="places" placeholder="Select the destination">
+                    <option value="default">Select the destination</option>
+                    <option value="bangladesh">Bangladesh</option>
+                    <option value="bhutan">Bhutan</option>
+                    <option value="china">China</option>
+                    <option value="hongkong">Hong Kong</option>
+                    <option value="india">India</option>
+                    <option value="japan">Japan</option>
+                    <option value="kuwait">Kuwait</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="oman">Oman</option>      
+                    <option value="qatar">Qatar</option>
+                    <option value="saudiarabia">Saudi Arabia</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="southkorea">South Korea</option>
+                    <option value="srilanka">Srilanka</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="turkey">Turkey</option>
+                    <option value="uae">UAE</option>
+                    <option value="vietnam">Vietnam</option>            
+                </select>
+                <br><br><label>Departure:</label>
+                <input type="date" id="departure">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <label>Return:</label>
+                <input type="date" id="arrival"><br><br>
+                <label>Class:</label>
+                <select id="quality">
+                    <option>Economy</option>
+                    <option>Premium Economy</option>
+                    <option>Business</option>
+                    <option>First</option>
+                </select><br><br>
+                <button type="submit" onclick="validateForm()">SEARCH FLIGHTS</button>
+                </center><br><br>
+                </fieldset> 
+    </form>
+    </center>
+    </section></b>
+
+    <script src="forflights.js"></script>
+    <script typ="text/javascript">
+        function validateForm() 
+        {
+            var places = document.getElementById('places').value;
+            var departure = document.getElementById('departure').value;
+            var arrival = document.getElementById('arrival').value;
+            var quality = document.getElementById('quality').value;
+            // alert("The departure and arrival date is "+departure+" and "+arrival+" and you are going to "+places);
+            alert("You're traveling on "+quality+" class to " + places.charAt(0).toUpperCase() + places.slice(1) + ". Departure: " + departure + ", Return: " + arrival+ ". Press OK to confirm.");
+
+            // if (places === "") {
+            //     alert("Please select a destination.");
+            // } else if (places === "bangladesh") {
+            //     alert("You're traveling to Bangladesh. Departure: " + departure + ", Return: " + arrival);
+            // } else if (places === "india") {
+            //     alert("You're traveling to India. Departure: " + departure + ", Return: " + arrival);
+            // } else if (places === "japan") {
+            //     alert("You're traveling to Japan. Departure: " + departure + ", Return: " + arrival);
+            // } else {
+            //     alert("You're traveling to " + places.charAt(0).toUpperCase() + places.slice(1) + ". Departure: " + departure + ", Return: " + arrival);
+            // }
+	    }
+    </script>
+</body>     
+</html>
+
+

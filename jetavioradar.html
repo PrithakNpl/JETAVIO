@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>JetAvio.com</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="radar.js">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Section top -->
+    <section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+            <a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+    </section>
+
+    <center><b>UNDER CONSTRUCTION !!!</b></center>
+
+    <div id="map"></div>
+    <script>
+        // Initialize the map centered on KTM (Kathmandu)
+        var map = L.map('map').setView([27.7000, 85.3667], 10);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Fetch flight data from OpenSky Network around KTM
+        fetch('https://opensky-network.org/api/states/all?lamin=27.4&lomin=85.0&lamax=28.0&lomax=86.0')
+            .then(response => response.json())
+            .then(data => {
+                data.states.forEach(plane => {
+                    // Get plane coordinates (plane[6] is latitude, plane[5] is longitude)
+                    var lat = plane[6];
+                    var lon = plane[5];
+
+                    // Check if coordinates exist (some data may be missing)
+                    if (lat && lon) {
+                        // Add a marker for each plane
+                        L.marker([lat, lon]).addTo(map)
+                            .bindPopup('Flight: ' + plane[1] + '<br>Altitude: ' + plane[7] + ' meters');
+                    }
+                });
+            })
+            .catch(error => console.log('Error fetching flight data:', error));
+    </script>
+    
+</body>     
+</html>

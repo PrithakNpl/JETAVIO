@@ -1,0 +1,148 @@
+<html></html>
+<head>
+	<title>JetAvio.com</title>
+	<link rel="stylesheet" href="homestyle.css">
+	<script src="scrollremember.js"></script>
+	<style>
+		body {margin: 0;padding: 0; font-family: Times New Roman;background-size: cover; background-image: url('WBBGradient.jpg'); height: 100%}
+		/* #first{background-size: cover; background-image: url('IMAGES/background/greenshade.jpg'); height: 100%} */
+		.format{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+         /* CSS for image and text */
+         .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 30%; /* Each image container takes up 30% of the width */
+        }
+        .image-container img {
+            width: 100%; /* Set the width of the image to 100% of its container */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            border-radius: 5px;
+        }
+        .image-container p {
+            margin-top: 10px;
+        }
+		label{font-size: 25px}
+		select{font-size: 20px}
+	</style>
+</head>
+<body>
+	<section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+			<a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+	</section>
+	<center>
+		<label>Choose an option:</label> 
+	<select onchange="redirectToPage(this)">
+		<option>--select--</option>
+		<option value="jetairbus.html">Airbus</a></option>
+		<option value="jetboeing.html">Boeing</a></option>
+		<option value="jetembraer.html">Embraer</a></option>
+		<option value="jetatr.html">ATR</a></option>
+		<option value="jetcomac.html">COMAC</a></option>
+		<option>Military</a></option>
+	</select>
+<div id="compare_route_button-container">
+		<a href="routevisual.html"><button style="align-items: left;">Route Visualization</button></a>
+		<a href="comparison.html"><button style="align-items: right;">Compare Aircrafts</button></a>
+	</div>	<section class="format">
+		<div class="image-container">
+			<img src="embraerlogo.png" alt="Image 1">
+		</div>
+	</section>
+	</center>
+
+<!-- .............................................................. -->
+
+	<script>
+    function redirectToPage(selectElement) 
+    {
+        var selectedValue = selectElement.value;
+        if (selectedValue) 
+        {
+            window.location.href = selectedValue;
+        }
+    }
+</script>
+
+<!-- .............................................................. -->
+
+<section class="format">
+<div class="image-container">
+	<img src="IMAGES/embraer/" alt="Image 1">
+	<p>B707</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b717.jpg" alt="Image 2">
+	<p>B717</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b727.jpg" alt="Image 3">
+	<p>B727</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b737-7.jpg" alt="Image 1">
+	<p>737-7</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b737-8.jpg" alt="Image 2">
+	<p>737-8</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b737-9.jpg" alt="Image 3">
+	<p>737-9</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b737-10.jpg" alt="Image 1">
+	<p>737-10</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b747.jpg" alt="Image 2">
+	<p>B747</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b757.jpg" alt="Image 3">
+	<p>B757</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b767.jpg" alt="Image 3">
+	<p>B767</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b777.jpg" alt="Image 3">
+	<p>B777</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b777-8.jpg" alt="Image 3">
+	<p>B777-8</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b777-9.jpg" alt="Image 3">
+	<p>B777-9</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b787-8.jpg" alt="Image 3">
+	<p>B787-8</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b787-9.jpg" alt="Image 3">
+	<p>B787-9</p>
+</div>
+<div class="image-container">
+	<img src="IMAGES/boeing/b787-10.jpg" alt="Image 3">
+	<p>B787-10</p>
+</div>
+</section>
+</body> 	
+</html>

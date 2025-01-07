@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>JetAvio.com</title>
+	<link rel="stylesheet" href="homestyle.css">
+	<style>
+		#bottom{background-size: cover; background-image: url('an225.jpg'); height: 100%}
+		label{font-size: 25px}
+		select{font-size: 20px}
+		html{overflow-y: hidden;}
+	</style>
+</head>
+<body>
+	<section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+			<a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+	</section>
+
+
+	<section id="bottom">
+		<center>
+		<form>
+			<label>Choose an option:</label> 
+			<select onchange="redirectToPage(this)">
+				<option>--select--</option>
+				<option value="jetairbus.html">Airbus</option>
+				<option value="jetboeing.html">Boeing</a></option>
+				<option value="jetembraer.html">Embraer</a></option>
+				<option value="jetatr.html">ATR</a></option>
+				<option value="jetcomac.html">COMAC</a></option>
+				<option>Military</a></option>
+			</select>
+		</form>
+	</center></p>
+	</section>
+
+
+	<script>
+    function redirectToPage(selectElement) 
+    {
+        var selectedValue = selectElement.value;
+        if (selectedValue) 
+        {
+            window.location.href = selectedValue;
+        }
+    }
+	</script>
+</body> 	
+</html>

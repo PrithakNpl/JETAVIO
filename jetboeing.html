@@ -1,0 +1,215 @@
+<html>
+<head>
+	<title>JetAvio.com</title>
+	<link rel="stylesheet" href="homestyle.css">
+	<script src="scrollremember.js"></script>
+	<style>
+		body {margin: 0;padding: 0; font-family: Times New Roman;background-size: cover; background-image: url('WBBGradient.jpg'); height: 100%}
+		.format{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+         /* CSS for image and text */
+         .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 30%; /* Each image container takes up 30% of the width */
+        }
+        .image-container img {
+            width: 100%; /* Set the width of the image to 100% of its container */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            border-radius: 5px;
+        }
+        .image-container p {
+            margin-top: 10px;
+        }
+		label{font-size: 25px}
+		select{font-size: 20px}
+	</style>
+</head>
+<body>
+	<section id="top">
+        <a href="JetAvio.html"><p class="logo-image"></p></a>
+        <div class="button-group">
+            <a href="Jetavio.html"><button>Home</button></a>
+            <a href="jetaircrafts.html"><button>Aircrafts</button></a>
+            <a href="jetavioflights.html"><button>Flights</button></a>
+			<a href="jetavioradar.html"><button>Radar</button></a>
+            <a href="jetaviosignup.html"><button>Sign Up</button></a>
+            <a href="jetavioabout.html"><button>About</button></a>
+        </div>
+	</section>
+	<center>
+		<label>Choose an option:</label> 
+	<select onchange="redirectToPage(this)">
+		<option>--select--</option>
+		<option value="jetairbus.html">Airbus</a></option>
+		<option value="jetboeing.html">Boeing</a></option>
+		<option value="jetembraer.html">Embraer</a></option>
+		<option value="jetatr.html">ATR</a></option>
+		<option value="jetcomac.html">COMAC</a></option>
+		<option>Military</a></option>
+	</select>
+	<div id="compare_route_button-container">
+		<a href="routevisual.html"><button style="align-items: left;">Route Visualization</button></a>
+		<a href="comparison.html"><button style="align-items: right;">Compare Aircrafts</button></a>
+	</div>	
+	<section class="format">
+		<div class="image-container">
+			<img src="boeinglogo.png" alt="Image 1">
+		</div>
+	</section>
+	</center>
+	<center><i><b>Note: Click the aircraft for its details</b></i></center>
+
+<!-- .............................................................. -->
+
+	<script>
+    function redirectToPage(selectElement) 
+    {
+        var selectedValue = selectElement.value;
+        if (selectedValue) 
+        {
+            window.location.href = selectedValue;
+        }
+    }
+</script>
+
+<!-- .............................................................. -->
+
+<section class="format">
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b707">
+		<img src="b707.jpg" alt="b707">
+		<p>B707</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b717">
+		<img src="b717.jpg" alt="Image 2">
+		<p>B717</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b727">
+		<img src="b727.jpg" alt="Image 2">
+		<p>B727</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b737-7">
+		<img src="b737-7.jpg" alt="Image 2">
+		<p>B737-7</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b737-8">
+		<img src="b737-8.jpg" alt="Image 2">
+		<p>B737-8</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b737-9">
+		<img src="b737-9.jpg" alt="Image 2">
+		<p>B737-9</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b737-10">
+		<img src="b737-10.jpg" alt="Image 2">
+		<p>B737-10</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b747-200">
+		<img src="b747-200.jpg" alt="Image 2">
+		<p>B747-200</p>
+	</a> 	
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b747-400">
+		<img src="b747-400.jpg" alt="Image 2">
+		<p>B747-400</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b747-8">
+		<img src="b747-8.jpg" alt="Image 2">
+		<p>B747-8</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b757-200">
+		<img src="b757-200.jpg" alt="Image 2">
+		<p>B757-200</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b757-300">
+		<img src="b757-300.jpg" alt="Image 2">
+		<p>B757-300</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b767">
+		<img src="b767.jpg" alt="Image 2">
+		<p>B767</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b777-200ER">
+		<img src="b777-200ER.jpg" alt="Image 2">
+		<p>B777-200ER</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b777-300ER">
+		<img src="b777-300ER.jpg" alt="Image 2">
+		<p>B777-300ER</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b777-8">
+		<img src="b777-8.jpg" alt="Image 2">
+		<p>B777-8</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b777-9">
+		<img src="b777-9.jpg" alt="Image 2">
+		<p>B777-9</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b787-8">
+		<img src="b787-8.jpg" alt="Image 2">
+		<p>B787-8</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b787-9">
+		<img src="b787-9.jpg" alt="Image 2">
+		<p>B787-9</p>
+	</a>
+</div>
+<div class="image-container">
+	<a href="aircraftdetail.html?aircraft=b787-10">
+		<img src="b787-10.jpg" alt="Image 2">
+		<p>B787-10</p>
+	</a>
+</div>
+</section>
+
+<script>
+	function redirectToPage(selectElement) {
+		  var selectedValue = selectElement.value;
+		  if (selectedValue) {
+			  window.location.href = selectedValue;
+		  }
+	  }
+</script>
+
+</body> 	
+</html>
